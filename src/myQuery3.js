@@ -1,10 +1,12 @@
-$(document).ready(function () {
-  $("#addRow").click(function () {
-    $("table").append( // To add a new row in a table
-      ' <tr id = "del"><td><input type="text"  placeholder="Enter Class"> <input type="text"  placeholder="Enter Board"> <input type="text" placeholder="Enter Marks"> <input type="text"  placeholder="Enter Division"> <input type="button" value="+" id="addRow"> <input type="button" value="-" id="deleteRow"></td></tr>'
-    );
-  });
-  $("#deleteRow").click(function () { // To delete the newly added row
-    $("#del").remove();
+$(document).ready(function() {
+  $(".table").click(function(event){
+    let str =
+      "<br> <div><input type='text' placeholder='Enter Class'> <input type='text' placeholder='Enter Board'> <input type='text' placeholder='Enter Marks'>  <input type='text' placeholder='Enter Division'> <button class='add'>+</button>  <button class='rmvRow'>-</button> </div>";
+    if (event.target.className == "add") {
+      $(event.target.parentNode).after(str);
+    }
+    if (event.target.className == "rmvRow") {
+      $(event.target.parentElement).hide();
+    }
   });
 });
