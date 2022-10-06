@@ -3,11 +3,11 @@ $(document).ready(function () {
     var pass = $("#input1").val();
     var conPass = $("#input2").val();
     $("p").text("Password Not Match").css("color", "red").hide();
-
-    if (pass == conPass) {
-      $("p").text("Password Match").css("color", "black").show();
-    } else if (conPass == "") {
+    if (pass == "" || conPass == "") {
       $("p").text("Password Not Match").css("color", "red").hide();
+    }
+    else if (pass == conPass) {
+      $("p").text("Password Match").css("color", "black").show();
     } else if (pass != conPass) {
       $("p").text("Password Not Match").css("color", "red").show();
     }
