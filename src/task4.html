@@ -7,46 +7,31 @@
     <title>Task 4</title>
   </head>
   <body>
-    <h2>
-      Create a list of products with sub-categories. When we click on "+" button
-      one more category can be added to the list in that category/sub-category.
-    </h2>
-    <hr />
-    <h3>Product List</h3>
-    <ul id="ul1">
-      <li>
-        <a href="#">Clothes</a><input type="button" class="button1" value="+" onclick="C_Ul1()" />
-      </li>
-      <ul id="subul1">
-        <li id="l1">
-          <a href="#">Tshirts</a><input type="button" id="button2" value="+" onclick="Tshirt_l1()" />
-        </li>
-        <li id="l2">
-          <a href="#">Trousers</a><input type="button" id="button3" value="+" onclick="Trouser_l2()"/>
+    <div>
+      <h3>
+        Create a list of products with sub-categories. When we click on  "+" button one more category can be added to the list in that category/sub-category.
+      </h3>
+      <hr>
+      <ul>
+        <li>
+          <a href="#">Clothes</a>
+          <button onclick="addingClothes()">+</button>
+          <ul id="clothes">
+          </ul>
         </li>
       </ul>
-    </ul>
-    <ul id="ul2">
-      <li>
-        <a href="#">Electronics</a
-        ><input type="button" id="button4" value="+" onclick="Elec_Ul2()" />
-      </li>
-      <ul id="subul2">
-        <li id="l3">
-          <a href="#">Mobiles</a><input type="button" id="button5" value="+" onclick="Mob_l3()"/>
-        </li>
-        <li id="l4">
-          <a href="#">Tabs</a><input type="button" id="button6" value="+" onclick="Tabs_l4()"/>
+      <ul>
+        <li>
+          <a href="#">Electronics</a>
+          <button onclick="addingElectronics()">+</button>
+          <ul id="electronics"></ul>
         </li>
       </ul>
-    </ul>
-
-    <br /><br />
-    <a href="task5.html">Task 5</a><br /><br />
-    <a href="main.html">Back to Home</a>
-  </body>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    </div>
+    <br /><br /><br />
+    <a href="main.html">Back To Home</a>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="myQuery4.js"></script>
-</html>
+    </html>
